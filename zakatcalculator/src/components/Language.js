@@ -3,7 +3,7 @@ import { languageList } from './Data3'
 
 export default function Language() {
   return (
-    <div>
+    <div className='Dropdown-cotainer'>
         <select className='list' id='name'>
                 {languageList.map((language) => <option className='optionclass' key={language.language} value={language.language}>{language.language}</option>)}
                 </select>
