@@ -44,7 +44,7 @@
 .app-header {
   display: flex;
   align-items: center;
-  padding: 16px;
+  padding: 10px;
   justify-content: space-between;
   background-color: var(--color-lighter);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -97,5 +97,36 @@
 }
 
 .expand-btn {
-  color: black;
+  color: white;
+    border: none;
+    background: none;
+    font-weight: bold;
+
+}
+
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  table-layout: auto;
+}
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th,
+td{
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+  font-size: small;
+}
+
+.text{
+  width: 90px;
+    background: #2e3235;
+    color: #dbd0d0;
+    border: none;
 }

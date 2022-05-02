@@ -42,6 +42,7 @@ export default function ProductTable(props) {
   //console.log(rows);
 
   return (
+    <div className='table'>
     <table>
       <thead>
         <tr>
@@ -69,6 +70,7 @@ export default function ProductTable(props) {
     }
       </tbody>
     </table>
+    </div>
   );
 
 }
