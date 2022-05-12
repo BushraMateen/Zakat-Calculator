@@ -10,6 +10,9 @@ export default function ProductTable(props) {
   let rows = [];
   let lastCategory = null;
 
+  
+  props.products.sort((a,b) => a.Line - b.Line );
+
 
 
   // const handleCategoryName = (category) => {
@@ -39,7 +42,7 @@ export default function ProductTable(props) {
     lastCategory = product.category;
   });
 
-  //console.log(rows);
+  console.log('row category',rows);
 
   return (
     <div className='table'>

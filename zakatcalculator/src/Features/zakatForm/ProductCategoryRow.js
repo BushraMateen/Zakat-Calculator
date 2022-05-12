@@ -8,10 +8,15 @@ export default function ProductCategoryRow(props) {
 
   let category = props.category;
 
+
   let products = props.products.filter((product) => product.category === category);
-  console.log('ProductCategoryRow',props);
-  console.log('ProductCategoryRow',category);
-  console.log('ProductCategoryRow',products);
+  products.sort((a,b) => a.Line - b.Line);
+  
+   
+
+  // console.log('ProductCategoryRow',props);
+  // console.log('ProductCategoryRow',category);
+   console.log('ProductCategoryRow',products);
   // console.log('Product.length',products.length);
 
 
@@ -34,6 +39,8 @@ export default function ProductCategoryRow(props) {
        
         </td>
         <td >
+          {console.log(category)}
+          {/* {console.log('products',products)} */}
           <Category Category = {category} />
         </td>
         <td >
@@ -47,8 +54,8 @@ export default function ProductCategoryRow(props) {
       {showProduct && (
           
             products.map((product, index) => {
-              console.log(products.length-index)
-              return (<ProductRow key = {index} product = {product} lineNo = {product.id} />)
+              console.log('product', product)
+              return (<ProductRow key = {index} product = {product} lineNo = {product.Line} />)
             })
           
        )}
