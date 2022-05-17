@@ -3,38 +3,43 @@
   --color-text: #d6d1d1;
   --color-dark: #f5f6f7;
   --color-gray: #999;
-  --color-bg: #1f2124;
+  --color-bg: #2e3235;;
   --color-lighter: #292a2c;
   --color-white: #2e3235;
   --color-border:#252629;
 }
 
 
+
 *{
+  /* box-sizing: border-box; */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Lexend', sans-serif;
   color: inherit;
   /* font-size: inherit; */
   scroll-behavior: smooth;
   text-align: center;
+  /* overflow: scroll; */
+ 
 }
 
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100vh; 
   color: var(--color-text);
   background-color: var(--color-bg);
   display: flex;
   align-items: center;
+  overflow: scroll;  
+  overflow-x: hidden;
 }
 
 .app {
   width: 100%;
-  max-width: 480px;
-  height: 88vh;
+  /* max-width: 592px; */
+  height: 100%; 
   margin: 0 auto;
   background-color: var(--color-white);
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
@@ -47,9 +52,14 @@
   padding: 10px;
   justify-content: space-between;
   background-color: var(--color-lighter);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  color : #f68657
-  
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 10%);
+  color: #f68657;
+  /* width: 80%; */
+  margin: auto;
+  width: 100%;
+  /* border: 3px solid green; */
+  justify-content: center;
+  padding: 10px;
 }
 
 .list{
@@ -106,9 +116,10 @@
 
 
 table {
-  width: 100%;
+  /* width: 100%; */
   margin: 20px auto;
   table-layout: auto;
+  overflow-x: auto;
 }
 table,
 td,
@@ -118,15 +129,55 @@ th {
 
 th,
 td{
-  padding: 2px;
+  padding: 5px 0px 0px;
   border: solid 1px;
-  text-align: center;
-  font-size: small;
+  text-align: left;
+  /* font-size: small; */
 }
 
 .text{
-  width: 90px;
+   width: 50%;
     background: #2e3235;
     color: #dbd0d0;
     border: none;
 }
+
+.table{
+      /* width: 80%; */
+      margin: auto;
+      /* width: 80%; */
+      /* border: 3px solid green; */
+      padding: 1px;
+    
+}
+
+.center-text{
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .table {
+      width: 95%;
+      float: left;
+  }
+  /* table {
+    width: 100%;
+    margin: 5px auto;
+    table-layout: auto;
+    overflow-x: auto;
+  } */
+  th, td {
+    padding: 2px 1px;
+    border: solid 1px;
+    text-align: left;
+    font-size: small;
+  
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .containe{
+    overflow-y: hidden;
+  }
+}
+

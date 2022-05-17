@@ -49,11 +49,11 @@ export default function ProductTable(props) {
     <table>
       <thead>
         <tr>
-          <th>Line</th>
-          <th>Line item</th>
-           <th>Amtval(A)</th>
-           <th>ZakatRate(R)</th>
-           <th>ZakatDue(z)</th>
+           <th className='center-text'>Line</th>
+           <th className='center-text'>Line item</th>
+           <th className='center-text'>Amtval</th>
+           <th className='center-text'>ZakatRate</th>
+           <th className='center-text'>ZakatDue</th>
         </tr>
       </thead>
       <tbody>

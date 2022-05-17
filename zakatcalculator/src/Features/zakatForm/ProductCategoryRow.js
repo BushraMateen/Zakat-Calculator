@@ -34,7 +34,7 @@ export default function ProductCategoryRow(props) {
       <tr>
         <td>
         <button className='expand-btn' onClick={handleCategoryClick}>
-          {showProduct ? <AiOutlineMinus /> : <AiOutlinePlus />}
+          {showProduct ? <AiOutlineMinus/> : <AiOutlinePlus/>}
           </button>
        
         </td>

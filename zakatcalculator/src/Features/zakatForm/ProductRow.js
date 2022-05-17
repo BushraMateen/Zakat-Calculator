@@ -5,11 +5,11 @@ export default function ProductRow(props) {
   const product = props.product
     return (
       <tr>
-         <td>{props.lineNo}</td>
+         <td className='center-text'>{props.lineNo}</td>
         <td>{product.name}</td>
-        <td><input className = "text" type="text" name="name" placeholder={props.product.AmtVal}/></td>
-        <td>{product.ZakatRate}</td>
-        <td>{(props.product.AmtVal * props.product.ZakatRate)/100}</td>
+        <td className='center-text'><input className = "text" type="text" name="name" placeholder={props.product.AmtVal}/></td>
+        <td className='center-text'>{product.ZakatRate}</td>
+        <td className='center-text'>{product.ZakatDue}</td>
       </tr>
     );
   
