@@ -111,12 +111,13 @@
     border: none;
     background: none;
     font-weight: bold;
+    padding-left: 10px;
 
 }
 
 
 table {
-  /* width: 100%; */
+   width: 100%; 
   margin: 20px auto;
   table-layout: auto;
   overflow-x: auto;
@@ -136,7 +137,7 @@ td{
 }
 
 .text{
-   width: 50%;
+   width: 100%;
     background: #2e3235;
     color: #dbd0d0;
     border: none;
@@ -175,9 +176,20 @@ td{
   
 }
 
-@media only screen and (max-width: 600px) {
-  .containe{
+/* @media only screen and (max-width: 600px) {
+  .container{
     overflow-y: hidden;
   }
-}
+} */
 
+.claculate-btn{
+  background: #f68657;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 11px;
+  width: 30%;
+  border: solid 1px black;
+  color: black;
+  font-weight: bold;
+
+}

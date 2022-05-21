@@ -3,7 +3,7 @@ import React from 'react'
 import FilterableProdcutTable from './FilterableProductTable'
 
 export default function ZakatTable(props) {
-   console.log(props.items) 
+   //console.log(props.items) 
   return (
    
       <FilterableProdcutTable products={props.items} />

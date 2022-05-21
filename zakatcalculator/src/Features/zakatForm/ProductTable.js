@@ -42,7 +42,7 @@ export default function ProductTable(props) {
     lastCategory = product.category;
   });
 
-  console.log('row category',rows);
+  //console.log('row category',rows);
 
   return (
     <div className='table'>

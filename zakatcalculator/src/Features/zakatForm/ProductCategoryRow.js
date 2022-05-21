@@ -16,11 +16,11 @@ export default function ProductCategoryRow(props) {
 
   // console.log('ProductCategoryRow',props);
   // console.log('ProductCategoryRow',category);
-   console.log('ProductCategoryRow',products);
+  // console.log('ProductCategoryRow',products);
   // console.log('Product.length',products.length);
 
 
-  const [showProduct, setShowProduct] = useState(false)
+  const [showProduct, setShowProduct] = useState(true)
 
  
   const handleCategoryClick = () =>{
@@ -39,7 +39,7 @@ export default function ProductCategoryRow(props) {
        
         </td>
         <td >
-          {console.log(category)}
+          {/* {console.log(category)} */}
           {/* {console.log('products',products)} */}
           <Category Category = {category} />
         </td>
@@ -54,7 +54,7 @@ export default function ProductCategoryRow(props) {
       {showProduct && (
           
             products.map((product, index) => {
-              console.log('product', product)
+              //console.log('product', product)
               return (<ProductRow key = {index} product = {product} lineNo = {product.Line} />)
             })
           
