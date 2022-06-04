@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import ProductTable from './ProductTable'
-
+import { UserContext } from './Context';
 
 export default function FilterableProdcutTable(props) {
 
-  
+  const { formState } = useContext(UserContext);
 
     let handleSubmit = (e)  => {
 
@@ -13,7 +13,7 @@ export default function FilterableProdcutTable(props) {
       fetch('http://127.0.0.1:8000/entries/', {
        method: "POST",
        body: JSON.stringify({
-         titile: "foo"
+        formState: formState
        }),
        headers: {
            'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ export default function FilterableProdcutTable(props) {
      .then(res => res.json())
       .then(
         (result) => {
-          console.log('result', result)
+          console.log('result post', result)
         },
         (error) => {
           console.log('error', error)
