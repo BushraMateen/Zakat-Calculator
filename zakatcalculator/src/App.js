@@ -17,6 +17,7 @@ function App() {
   
   let getTable = async () => {
     let response = await fetch('http://127.0.0.1:8000/table/')
+    console.log('response',response)
     let data = await response.json()
     setTable(data)
   }
@@ -31,7 +32,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/ZakatTable" element={<ZakatTable items = {table}/>}></Route>
-          
         </Routes>
         
         </div>

@@ -1,6 +1,6 @@
 export const items = [
-    {Line : 1, category: 'Personal Wealth', AmtVal: '$..', ZakatRate:  '2.5%', ZakatDue:'$..', name: 'Personal cash on hand and in bank accounts'},
-    {Line : 2, category: 'Personal Wealth', AmtVal: '$..', ZakatRate:  '2.5%', ZakatDue:'$..', name: 'Total value of gold,silver and precious items'},
+    {Line : 1, category: 'Personal Wealth', AmtVal: '$..', ZakatRate:  '2.5%', ZakatDue:'$..', name: 'Personal cash on hand and in bank accounts'}, //PW_PersonalCash_Hand_Bank_AmtVal
+    {Line : 2, category: 'Personal Wealth', AmtVal: '$..', ZakatRate:  '2.5%', ZakatDue:'$..', name: 'Total value of gold,silver and precious items'}, //PW_TotalValueof_Gold_silver
     {Line : 3, category: 'Personal Wealth', AmtVal: '$..', ZakatRate:  '2.5%', ZakatDue:'$..', name: 'Total value of stocks,shares and bonds'},
     {Line : 4, category: 'Business Wealth', AmtVal: '$..', ZakatRate:  '2.5%', ZakatDue:'$..', name: 'Business cash on hand and in bank accounts'},
     {Line : 5, category: 'Business Wealth', AmtVal: '$..', ZakatRate:  '2.5%', ZakatDue:'$..', name: 'Net value of business inventory or any trade goods'},
