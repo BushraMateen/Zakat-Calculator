@@ -6,6 +6,13 @@ const formReducer = (state, action) => {
             ...state,
             [action.field]: action.payload,
         };
+    case 'User Input':
+      return{
+        ...state,
+        UserId : action.payload,
+        ZakatRate : 2.5,
+        Year : new Date().getFullYear() 
+      }
     default:
         return state;
   }

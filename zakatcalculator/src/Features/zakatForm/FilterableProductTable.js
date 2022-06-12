@@ -4,10 +4,14 @@ import { UserContext } from './Context';
 
 export default function FilterableProdcutTable(props) {
 
-  const { formState } = useContext(UserContext);
+  const { formState, dispatch} = useContext(UserContext);
+  
 
     let handleSubmit = (e)  => {
 
+      
+
+      console.log('handleSubmit clicked')
       e.preventDefault();
       
       fetch('http://127.0.0.1:8000/entries/', {

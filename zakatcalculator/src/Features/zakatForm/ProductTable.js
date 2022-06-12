@@ -46,33 +46,24 @@ export default function ProductTable(props) {
 
   return (
     <div className='table'>
-    <table>
-      <thead>
-        <tr>
-           <th className='center-text'>Line</th>
-           <th className='center-text'>Line item</th>
-           <th className='center-text'>Amtval</th>
-           <th className='center-text'>ZakatRate</th>
-           <th className='center-text'>ZakatDue</th>
-        </tr>
-      </thead>
-      <tbody>
-
-      {
-        rows.map((category) => {
-          return (
-             <ProductCategoryRow 
-                
-                //HandleCategoryName = {handleCategoryName}
-                category={category}
-                key={category}
-                products = {props.products}
-                 />
-            )
-      })
-    }
-      </tbody>
-    </table>
+      <table>
+        <thead>
+          <tr>
+            <th className='center-text'>Line</th>
+            <th className='center-text'>Line item</th>
+            <th className='center-text'>Amtval</th>
+            <th className='center-text'>ZakatRate</th>
+            <th className='center-text'>ZakatDue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ProductCategoryRow
+            // category={category}
+            // key={category}
+            // products={props.products}
+          />
+        </tbody>
+      </table>
     </div>
   );
 
