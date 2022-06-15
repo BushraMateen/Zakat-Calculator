@@ -15,7 +15,7 @@ export default function ProductRow(props) {
 
   const nonEditableIds = [14,15,16];
 
-   const { formState, dispatch } = useContext(UserContext);
+   //const { formState, dispatch } = useContext(UserContext);
 
    //const  [state, dispatch] = useReducer(reducer, []);
   //console.log('ProductRow', product);
@@ -32,26 +32,26 @@ export default function ProductRow(props) {
 
     //setdbObject({...dbObject, [name]: value});
 
-    dispatch({ 
-      type: 'HANDLE INPUT TEXT',
-      field: name, 
-      payload: value,
-    })
+  //   dispatch({ 
+  //     type: 'HANDLE INPUT TEXT',
+  //     field: name, 
+  //     payload: value,
+  //   })
 
-   console.log(product);
-   //console.log('dbObject', dbObject);
-   console.log('reducer object', formState);
+  //  console.log(product);
+  //  //console.log('dbObject', dbObject);
+  //  console.log('reducer object', formState);
 
    }
 
-   useEffect(() => {
-    console.log('reducer object', formState);
-   }, [formState])
+  //  useEffect(() => {
+  //   console.log('reducer object', formState);
+  //  }, [formState])
    
 
     return (
       <tr>
-         <td className='center-text'>{props.lineNo}</td>
+         {/* <td className='center-text'>{props.lineNo}</td>
         <td>{product.name}</td>
         {(nonEditableIds.indexOf(product.id) !== -1) ? <td className='center-text'></td> 
         : <td className='center-text'>
@@ -64,7 +64,7 @@ export default function ProductRow(props) {
           </td>}
         
         <td className='center-text'>{product.ZakatRate}</td>
-        <td className='center-text'>{product.ZakatDue}</td>
+        <td className='center-text'>{product.ZakatDue}</td> */}
       </tr>
     );
   
