@@ -193,3 +193,32 @@ td{
   font-weight: bold;
 
 }
+
+.pop-up{
+  background-color: white;
+  padding: 60px 100px;
+}
+
+.logout-btn{
+  position:fixed; 
+  right:80px;
+  background-color: #f68657;
+  border-radius: 8px;
+  width: 8%;
+  border: solid 1px black;
+  color: black;
+  font-weight: bold;
+  height: 27px;
+}
+
+.login-btn{
+  position: absolute;
+  top: 40%;
+  background-color: #f68657;
+  border-radius: 8px;
+  width: 8%;
+  border: solid 1px black;
+  color: black;
+  font-weight: bold;
+  height: 27px;
+}

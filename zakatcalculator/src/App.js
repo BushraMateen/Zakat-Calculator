@@ -15,7 +15,7 @@ function App() {
         <div className='app-header'>
         <h1>Zakat Calculator</h1>
         
-        <button onClick={() => logout({ returnTo: window.location.origin })}>
+        <button  className = 'logout-btn' onClick={() => logout({ returnTo: window.location.origin })}>
       Log Out
     </button>
         </div>
@@ -26,7 +26,7 @@ function App() {
         </div>
     </div>  
     </Router>
-      :  <button onClick = {loginWithRedirect}>login</button>
+      :  <button  className = 'login-btn' onClick = {loginWithRedirect}>login</button>
   );
 }
 

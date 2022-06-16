@@ -1,12 +1,12 @@
 import React, {useContext, useEffect} from 'react'
 import ProductTable from './ProductTable'
 import { UserContext } from './Context';
+import { useModal } from 'react-hooks-use-modal';
 
 export default function FilterableProdcutTable() {
-
-  const { formState, setTable, table} = useContext(UserContext);
   
-
+  const [Modal,open,close] = useModal()
+  const { formState, setTable, table} = useContext(UserContext);
     let handleSubmit = (e)  => {
       console.log('handleSubmit clicked')
       e.preventDefault();
@@ -49,7 +49,19 @@ export default function FilterableProdcutTable() {
     <div>
       <form onSubmit={handleSubmit}>
         <ProductTable/>
-        <input className = 'claculate-btn' type="submit" value="Calculate" />
+        <input
+          className = 'claculate-btn'
+          type="submit"
+          value="calculate"
+          onClick={open}
+        />
+        <Modal>
+        <div className='pop-up'>
+          <h4>zakat Payable : {table[0].D_Remaining_Zakat_Due_ZakatDue}</h4>
+          <button  className = 'claculate-btn' onClick={close}>CLOSE</button>
+        </div>
+      </Modal>
+    
       </form>
    
   </div>

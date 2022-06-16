@@ -4,6 +4,7 @@ import ProductRow from './ProductRow';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import {UserContext} from './Context';
 import {useAuth0} from '@auth0/auth0-react';
+import FilterableProdcutTable from './FilterableProductTable';
 
 export default function ProductCategoryRow() {
 
