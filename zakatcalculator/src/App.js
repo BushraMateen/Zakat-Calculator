@@ -1,20 +1,32 @@
 
 import './App.css';
 import Home from './components/Home';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import ZakatTable from './Features/zakatForm/ZakatTable';
+import {useAuth0} from '@auth0/auth0-react';
 
 function App() {
+  const { isAuthenticated,loginWithRedirect,logout} = useAuth0();
   return (
-    <div className="container dark">
+    isAuthenticated ?
+    <Router>
+      <div className="container dark">
         <div className="app">
         <div className='app-header'>
-        <h1>Zakat Calculator</h1></div>
-        <Home />
-        <div >
-        <button className='submit-btn'>Submit</button>
-      </div>
+        <h1>Zakat Calculator</h1>
+        
+        <button  className = 'logout-btn' onClick={() => logout({ returnTo: window.location.origin })}>
+      Log Out
+    </button>
         </div>
-       
-    </div>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/ZakatTable" element={<ZakatTable/>}></Route>
+        </Routes>
+        </div>
+    </div>  
+    </Router>
+      :  <button  className = 'login-btn' onClick = {loginWithRedirect}>login</button>
   );
 }
 
