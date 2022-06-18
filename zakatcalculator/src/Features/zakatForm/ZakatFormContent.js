@@ -1,10 +1,7 @@
-import React, {useState,useContext} from 'react'
-import Category from './Category';
-import ProductRow from './ProductRow';
+import React, {useState,useContext} from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import {UserContext} from './Context';
 import {useAuth0} from '@auth0/auth0-react';
-import FilterableProdcutTable from './FilterableProductTable';
 
 export default function ProductCategoryRow() {
 
@@ -21,13 +18,7 @@ export default function ProductCategoryRow() {
 
   let zakatTable = table[0];
 
-  console.log("result table : ", table)
-    
-
    let handleChange = (event) => {
-
-    console.log('handleChange');
-    
     const target = event.target;
     const value = target.value;
     const name = target.name;

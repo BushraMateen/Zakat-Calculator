@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
-import ProductCategoryRow from './ProductCategoryRow';
-import ProductRow from './ProductRow';
+import React from 'react';
+import ProductCategoryRow from './ZakatFormContent';
 
 export default function ProductTable() {
 

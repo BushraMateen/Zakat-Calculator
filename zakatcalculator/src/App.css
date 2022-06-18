@@ -12,15 +12,12 @@
 
 
 *{
-  /* box-sizing: border-box; */
   margin: 0;
   padding: 0;
   font-family: 'Lexend', sans-serif;
   color: inherit;
-  /* font-size: inherit; */
   scroll-behavior: smooth;
   text-align: center;
-  /* overflow: scroll; */
  
 }
 
@@ -38,7 +35,6 @@
 
 .app {
   width: 100%;
-  /* max-width: 592px; */
   height: 100%; 
   margin: 0 auto;
   background-color: var(--color-white);
@@ -54,16 +50,13 @@
   background-color: var(--color-lighter);
   box-shadow: 0px 1px 3px rgb(0 0 0 / 10%);
   color: #f68657;
-  /* width: 80%; */
   margin: auto;
   width: 100%;
-  /* border: 3px solid green; */
   justify-content: center;
   padding: 10px;
 }
 
 .list{
-  /* position: absolute; */
   width: 96px;
   height: 26px;
   left: 77px;
@@ -74,7 +67,6 @@
 
 }
 .optionclass{
-  /* position: absolute; */
   width: 56px;
   height: 14px;
   left: 78px;
@@ -85,9 +77,6 @@
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
-  /* identical to box height */
-
-
   color: #FFFFFF;
 }
 
@@ -133,7 +122,7 @@ td{
   padding: 5px 0px 0px;
   border: solid 1px;
   text-align: left;
-  /* font-size: small; */
+  
 }
 
 .text{
@@ -144,10 +133,8 @@ td{
 }
 
 .table{
-      /* width: 80%; */
+      
       margin: auto;
-      /* width: 80%; */
-      /* border: 3px solid green; */
       padding: 1px;
     
 }
@@ -160,12 +147,7 @@ td{
       width: 95%;
       float: left;
   }
-  /* table {
-    width: 100%;
-    margin: 5px auto;
-    table-layout: auto;
-    overflow-x: auto;
-  } */
+  
   th, td {
     padding: 2px 1px;
     border: solid 1px;
@@ -176,11 +158,6 @@ td{
   
 }
 
-/* @media only screen and (max-width: 600px) {
-  .container{
-    overflow-y: hidden;
-  }
-} */
 
 .claculate-btn{
   background: #f68657;

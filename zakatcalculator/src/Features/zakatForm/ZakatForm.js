@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react'
-import ProductTable from './ProductTable'
+import ProductTable from './ZakatFormHeader'
 import { UserContext } from './Context';
 import { useModal } from 'react-hooks-use-modal';
 
@@ -37,7 +37,7 @@ export default function FilterableProdcutTable() {
     
     }, [table])
     
-    
+    /**fecthing zakattable data */
     let getTable = async () => {
       let response = await fetch('http://127.0.0.1:8000/table/')
       let data = await response.json()
