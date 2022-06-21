@@ -8,7 +8,6 @@ export default function FilterableProdcutTable() {
   const [Modal,open,close] = useModal()
   const { formState, setTable, table} = useContext(UserContext);
     let handleSubmit = (e)  => {
-      console.log('handleSubmit clicked')
       e.preventDefault();
       
       fetch('http://127.0.0.1:8000/entries/', {
@@ -17,7 +16,8 @@ export default function FilterableProdcutTable() {
         formState: formState
        }),
        headers: {
-           'Content-Type': 'application/json'
+           'Content-Type': 'application/json',
+          
        },
      })
      .then(res => res.json())
@@ -54,6 +54,7 @@ export default function FilterableProdcutTable() {
           type="submit"
           value="calculate"
           onClick={open}
+         
         />
         <Modal>
         <div className='pop-up'>
