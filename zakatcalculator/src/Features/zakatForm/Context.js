@@ -7,6 +7,7 @@ export const ContextProvider = ({ children }) =>  {
 
     //useReducer implemented
     const initialFormState = {};
+    
     let [table,setTable] = useState([{
         id: "",
         UserId : "",

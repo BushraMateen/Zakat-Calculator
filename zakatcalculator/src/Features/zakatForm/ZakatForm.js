@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react'
-import ProductTable from './ZakatFormHeader'
+import ZakatFormHeader from './ZakatFormHeader'
 import { UserContext } from './Context';
 import { useModal } from 'react-hooks-use-modal';
 
@@ -7,13 +7,16 @@ export default function FilterableProdcutTable() {
   
   const [Modal,open,close] = useModal()
   const { formState, setTable, table} = useContext(UserContext);
+
     let handleSubmit = (e)  => {
+      console.log('formstate',formState)
       e.preventDefault();
       
+     
       fetch('http://127.0.0.1:8000/entries/', {
        method: "POST",
        body: JSON.stringify({
-        formState: formState
+       formState: formState
        }),
        headers: {
            'Content-Type': 'application/json',
@@ -25,6 +28,7 @@ export default function FilterableProdcutTable() {
         (result) => {
           console.log('result post', result)
           getTable();
+          open();
         },
         (error) => {
           console.log('error', error)
@@ -48,12 +52,12 @@ export default function FilterableProdcutTable() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <ProductTable/>
+        <ZakatFormHeader/>
         <input
           className = 'claculate-btn'
           type="submit"
           value="calculate"
-          onClick={open}
+          // onClick={open}
          
         />
         <Modal>
