@@ -251,15 +251,7 @@ export default function ProductCategoryRow() {
       <tr>
         <td className='center-text'>12</td>
         <td>Zakat Total</td>
-        <td className='center-text'>
-          <input
-            className="text"
-            type="number"
-            name='BW_Zakat_Total_AmtVal'
-            required onChange={handleChange}
-            placeholder={zakatTable.BW_Zakat_Total_AmtVal} />
-        </td>
-
+        <td className='center-text'>{zakatTable.BW_Zakat_Total_AmtVal }</td>
         <td className='center-text'>2.5%</td>
         <td className='center-text'>{zakatTable.BW_Zakat_Total_ZakatDue}</td>
       </tr>
