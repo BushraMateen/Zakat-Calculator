@@ -13,7 +13,7 @@ export default function ZakatForm() {
       e.preventDefault();
       
      
-      fetch('http://127.0.0.1:8000/entries/', {
+      fetch('https://zakat-api.herokuapp.com/entries/', {
        method: "POST",
        body: JSON.stringify({
        formState: formState
@@ -41,9 +41,11 @@ export default function ZakatForm() {
     
     }, [table])
     
-    /**fecthing zakattable data */
+    //http://127.0.0.1:8000
+    //https://zakat-api.herokuapp.com/
+    /**fecthing zakattable data */ 
     let getTable = async () => {
-      let response = await fetch('http://127.0.0.1:8000/table/')
+      let response = await fetch('https://zakat-api.herokuapp.com/table/')
       let data = await response.json()
       setTable(data)
     }

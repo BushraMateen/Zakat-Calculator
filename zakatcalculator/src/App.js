@@ -51,6 +51,13 @@ function App() {
               <Route path="/" element={<Home />}></Route>
               <Route path="/ZakatTable" element={<ZakatTable />}></Route>
             </Routes>
+            <div className='footer'>
+              <p1 className='copy-write'>
+              Copyright 2022 by Zakat Calculator. All Rights Reserved.</p1> 
+             
+          <p>v1.0.0</p>
+
+        </div>
           </div>
         </div>
       </Router>
