@@ -1,8 +1,7 @@
-import React, {useState} from 'react'
-import ProductCategoryRow from './ProductCategoryRow';
-import ProductRow from './ProductRow';
+import React from 'react';
+import ZakatFormContent from './ZakatFormContent';
 
-export default function ProductTable() {
+export default function ZakatFormHeader() {
 
   return (
     <div className='table'>
@@ -17,7 +16,7 @@ export default function ProductTable() {
           </tr>
         </thead>
         <tbody>
-          <ProductCategoryRow
+          <ZakatFormContent
           />
         </tbody>
       </table>

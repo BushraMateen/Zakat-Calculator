@@ -1,12 +1,9 @@
-import React, {useState,useContext} from 'react'
-import Category from './Category';
-import ProductRow from './ProductRow';
+import React, {useState,useContext} from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import {UserContext} from './Context';
 import {useAuth0} from '@auth0/auth0-react';
-import FilterableProdcutTable from './FilterableProductTable';
 
-export default function ProductCategoryRow() {
+export default function ZakatFormContent() {
 
   const [showProduct, setShowProduct] = useState(true)
 
@@ -15,19 +12,14 @@ export default function ProductCategoryRow() {
   const [showDw,setShowDw] = useState(true)
 
   const { user} = useAuth0();
+  
 
   
-  const { formState, dispatch, table } = useContext(UserContext);
+  const { dispatch, table } = useContext(UserContext);
 
   let zakatTable = table[0];
 
-  console.log("result table : ", table)
-    
-
    let handleChange = (event) => {
-
-    console.log('handleChange');
-    
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -74,9 +66,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='PW_PersonalCash_Hand_Bank_AmtVal'
-            onChange={handleChange}
+            required onChange={handleChange}
             placeholder={zakatTable.PW_PersonalCash_Hand_Bank_AmtVal} />
         </td>
 
@@ -89,9 +81,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='PW_TotalValueof_Gold_silver_AmtVal'
-            onChange={handleChange}
+            required onChange={handleChange}
             placeholder={zakatTable.PW_TotalValueof_Gold_silver_AmtVal}/>
         </td>
 
@@ -104,9 +96,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='PW_TotalValueof_stocks_shares_bonds_AmtVal'
-            onChange={handleChange}
+            required onChange={handleChange}
             placeholder={zakatTable.PW_TotalValueof_stocks_shares_bonds_AmtVal} />
         </td>
 
@@ -119,9 +111,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='PW_TotalcashValueof_retirement_pansion_AmtVal'
-            onChange={handleChange}
+            required onChange={handleChange}
             placeholder={zakatTable.PW_TotalcashValueof_retirement_pansion_AmtVal} />
         </td>
 
@@ -134,9 +126,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='PW_Loans_tobe_recievable_AmtVal'
-            onChange={handleChange}
+            required onChange={handleChange}
             placeholder={zakatTable.PW_Loans_tobe_recievable_AmtVal} />
         </td>
 
@@ -150,9 +142,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='PW_Other_expecected_recievables_AmtVal'
-            onChange={handleChange}
+            reuquired onChange={handleChange}
             placeholder={zakatTable.PW_Other_expecected_recievables_AmtVal} />
         </td>
         
@@ -187,9 +179,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='BW_BusinessCash_Hand_Bank_AmtVal'
-            onChange={handleChange}
+            required onChange={handleChange}
             placeholder={zakatTable.BW_BusinessCash_Hand_Bank_AmtVal} />
         </td>
 
@@ -202,9 +194,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='BW_Netvalueof_business_tradegoods_AmtVal'
-            onChange={handleChange}
+           required onChange={handleChange}
             placeholder={zakatTable.BW_Netvalueof_business_tradegoods_AmtVal} />
         </td>
 
@@ -217,9 +209,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='BW_Total_business_recievables_AmtVal'
-            onChange={handleChange}
+           required onChange={handleChange}
             placeholder={zakatTable.BW_Total_business_recievables_AmtVal} />
         </td>
 
@@ -232,9 +224,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='BW_NetIncomefrom_business_exploitedassets_duringyear_AmtVal'
-            onChange={handleChange}
+           required onChange={handleChange}
             placeholder={zakatTable.BW_NetIncomefrom_business_exploitedassets_duringyear_AmtVal}  />
         </td>
 
@@ -247,9 +239,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='BW_Currentvalueof_held_realestateproperties_AmtVal'
-            onChange={handleChange}
+            required red onChange={handleChange}
             placeholder={zakatTable.BW_Currentvalueof_held_realestateproperties_AmtVal} />
         </td>
 
@@ -259,15 +251,7 @@ export default function ProductCategoryRow() {
       <tr>
         <td className='center-text'>12</td>
         <td>Zakat Total</td>
-        <td className='center-text'>
-          <input
-            className="text"
-            type="text"
-            name='BW_Zakat_Total_AmtVal'
-            onChange={handleChange}
-            placeholder={zakatTable.BW_Zakat_Total_AmtVal} />
-        </td>
-
+        <td className='center-text'>{zakatTable.BW_Zakat_Total_AmtVal }</td>
         <td className='center-text'>2.5%</td>
         <td className='center-text'>{zakatTable.BW_Zakat_Total_ZakatDue}</td>
       </tr>
@@ -298,9 +282,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
             className="text"
-            type="text"
+            type="number"
             name='D_Outstanding_necessary_debts_AmtVal'
-            onChange={handleChange}
+            required onChange={handleChange}
             placeholder={zakatTable.D_Outstanding_necessary_debts_AmtVal}/>
         </td>
         <td className='center-text'>2.5%</td>
@@ -314,9 +298,9 @@ export default function ProductCategoryRow() {
         <td className='center-text'>
           <input
               className="text"
-              type="text"
+              type="number"
               name='D_Zakat_paid_in_advance_duringYear_ZakatDue'
-              onChange={handleChange}
+              required onChange={handleChange}
               placeholder={zakatTable.D_Zakat_paid_in_advance_duringYear_ZakatDue} />
         </td>
       </tr>
