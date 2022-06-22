@@ -13,7 +13,7 @@ export default function Home() {
       <Link to="/ZakatTable">
      <button className='submit-btn'>Submit</button>
     </Link>
-
+   
     </div> 
     
       

@@ -97,6 +97,7 @@
     border: solid 1px black;
     color: black;
     font-weight: bold;
+    margin-bottom: 28%;
 }
 
 .expand-btn {
@@ -180,6 +181,7 @@ td{
   border: solid 1px black;
   color: black;
   font-weight: bold;
+  margin-bottom: 5px;
 
 }
 
@@ -204,8 +206,41 @@ td{
   top: 10px;
 
 } 
+.login-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #f68657;
+  border-radius: 8px;
+  width: 20%;
+  border: solid 1px black;
+  color: black;
+  font-weight: bold;
+  height: 25px;
+ 
+}
+.footer{
+  position: relative;
+   left: 0;
+   bottom: 0;
+   /* width: 100%; */
+   background-color: var(--color-lighter);
+   box-shadow: 0px 1px 3px rgb(0 0 0 / 10%);
+   color: #f68657;
+   padding: 10px;
+   text-align: right;
+}
 
-
+.copy-write{
+  display: block;
+  font-size: small;
+}
+p{
+  text-align: right;
+  font-size: smaller;
+}
 
 .navigation-menu {
   margin-left: auto;
