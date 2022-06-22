@@ -1,7 +1,7 @@
 import React from 'react';
 import ZakatFormContent from './ZakatFormContent';
 
-export default function ProductTable() {
+export default function ZakatFormHeader() {
 
   return (
     <div className='table'>

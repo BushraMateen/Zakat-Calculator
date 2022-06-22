@@ -3,7 +3,7 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import {UserContext} from './Context';
 import {useAuth0} from '@auth0/auth0-react';
 
-export default function ProductCategoryRow() {
+export default function ZakatFormContent() {
 
   const [showProduct, setShowProduct] = useState(true)
 

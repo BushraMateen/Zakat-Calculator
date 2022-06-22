@@ -3,7 +3,7 @@ import ZakatFormHeader from './ZakatFormHeader'
 import { UserContext } from './Context';
 import { useModal } from 'react-hooks-use-modal';
 
-export default function FilterableProdcutTable() {
+export default function ZakatForm() {
   
   const [Modal,open,close] = useModal()
   const { formState, setTable, table} = useContext(UserContext);
