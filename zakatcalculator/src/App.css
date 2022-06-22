@@ -238,7 +238,8 @@ td{
   font-size: small;
 }
 p{
-  text-align: right; 
+  text-align: right;
+  font-size: smaller;
 }
 
 .navigation-menu {
