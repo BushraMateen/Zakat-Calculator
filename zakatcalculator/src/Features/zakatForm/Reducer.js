@@ -10,8 +10,10 @@ const formReducer = (state, action) => {
       return{
         ...state,
         UserId : action.payload,
-        ZakatRate : 2.5,
-        Year : new Date().getFullYear() 
+        ZakatRate : 0.025,
+        Year : new Date().getFullYear() ,
+        email_field : action.email,
+        name : action.username,
       }
     default:
         return state;
