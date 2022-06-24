@@ -1,13 +1,12 @@
-import React from 'react'
-//import {items} from '../ItemData'
-import FilterableProdcutTable from './FilterableProductTable'
+import React from 'react';
+import ZakatForm from './ZakatForm'
 import {ContextProvider} from './Context';
 
-export default function ZakatTable(props) {
-   //console.log(props.items) 
+export default function ZakatTable() {
+ 
   return (
    <ContextProvider>
-      <FilterableProdcutTable products={props.items} />
+      <ZakatForm />
    </ContextProvider>
      
   )
