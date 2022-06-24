@@ -1,19 +1,23 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import ZakatFormHeader from './ZakatFormHeader'
 import { UserContext } from './Context';
 import { useModal } from 'react-hooks-use-modal';
+import {useAuth0} from '@auth0/auth0-react';
 
 export default function ZakatForm() {
   
   const [Modal,open,close] = useModal()
   const { formState, setTable, table} = useContext(UserContext);
+  const [isCalculate,setIsCalculate] = useState(false);
+  const { user} = useAuth0();
 
     let handleSubmit = (e)  => {
       console.log('formstate',formState)
+
+      setIsCalculate(!isCalculate)
+
       e.preventDefault();
-      
-     
-      fetch('https://zakat-api.herokuapp.com/entries/', {
+      fetch('http://127.0.0.1:8000/entries/', {
        method: "POST",
        body: JSON.stringify({
        formState: formState
@@ -39,17 +43,20 @@ export default function ZakatForm() {
     useEffect(() => {
       getTable()
     
-    }, [table])
+    }, [isCalculate])
     
     //http://127.0.0.1:8000
     //https://zakat-api.herokuapp.com/
     /**fecthing zakattable data */ 
     let getTable = async () => {
-      let response = await fetch('https://zakat-api.herokuapp.com/table/')
+      let response = await fetch('http://127.0.0.1:8000/table/'+ user.sub)
       let data = await response.json()
+      console.log('data',data)
       setTable(data)
+     
+
     }
-    
+    //console.log('data',table)
 
   return (
     <div>

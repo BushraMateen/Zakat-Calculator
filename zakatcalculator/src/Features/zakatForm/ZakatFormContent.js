@@ -13,11 +13,10 @@ export default function ZakatFormContent() {
 
   const { user} = useAuth0();
   
-
-  
   const { dispatch, table } = useContext(UserContext);
 
   let zakatTable = table[0];
+  
 
    let handleChange = (event) => {
     const target = event.target;
@@ -34,6 +33,8 @@ export default function ZakatFormContent() {
     dispatch({ 
       type: 'User Input',
       field: 'UserId',
+      username: user.name,
+      email: user.email,
       payload: user.sub,
     })
 
