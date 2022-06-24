@@ -55,7 +55,7 @@ function App() {
               <p1 className='copy-write'>
               Copyright 2022 by Zakat Calculator. All Rights Reserved.</p1> 
              
-          <p>v1.0.0</p>
+          <p>v1.1.0</p>
 
         </div>
           </div>
