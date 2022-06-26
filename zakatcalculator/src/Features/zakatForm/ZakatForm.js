@@ -15,8 +15,8 @@ export default function ZakatForm() {
       //console.log('formstate',formState)
 
       e.preventDefault();
-      
-      if(e.nativeEvent.submitter.className != 'expand-btn') // && e.nativeEvent.submitter.className != ''
+
+      if(e.nativeEvent.submitter.className !== 'expand-btn') // && e.nativeEvent.submitter.className != ''
       {
         fetch('https://zakat-api.herokuapp.com/entries/', {
           method: "POST",
