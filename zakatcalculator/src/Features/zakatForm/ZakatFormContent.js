@@ -13,7 +13,7 @@ export default function ZakatFormContent() {
 
   const { user} = useAuth0();
   
-  const { dispatch, table } = useContext(UserContext);
+  const { dispatch, table, formState } = useContext(UserContext);
 
   let zakatTable = table[0];
   
@@ -69,6 +69,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='PW_PersonalCash_Hand_Bank_AmtVal'
+            value={formState.PW_PersonalCash_Hand_Bank_AmtVal}
             required onChange={handleChange}
             placeholder={zakatTable.PW_PersonalCash_Hand_Bank_AmtVal} />
         </td>
@@ -84,6 +85,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='PW_TotalValueof_Gold_silver_AmtVal'
+            value={formState.PW_TotalValueof_Gold_silver_AmtVal}
             required onChange={handleChange}
             placeholder={zakatTable.PW_TotalValueof_Gold_silver_AmtVal}/>
         </td>
@@ -99,6 +101,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='PW_TotalValueof_stocks_shares_bonds_AmtVal'
+            value={formState.PW_TotalValueof_stocks_shares_bonds_AmtVal}
             required onChange={handleChange}
             placeholder={zakatTable.PW_TotalValueof_stocks_shares_bonds_AmtVal} />
         </td>
@@ -114,6 +117,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='PW_TotalcashValueof_retirement_pansion_AmtVal'
+            value={formState.PW_TotalcashValueof_retirement_pansion_AmtVal}
             required onChange={handleChange}
             placeholder={zakatTable.PW_TotalcashValueof_retirement_pansion_AmtVal} />
         </td>
@@ -129,6 +133,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='PW_Loans_tobe_recievable_AmtVal'
+            value={formState.PW_Loans_tobe_recievable_AmtVal}
             required onChange={handleChange}
             placeholder={zakatTable.PW_Loans_tobe_recievable_AmtVal} />
         </td>
@@ -145,6 +150,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='PW_Other_expecected_recievables_AmtVal'
+            value={formState.PW_Other_expecected_recievables_AmtVal}
             reuquired onChange={handleChange}
             placeholder={zakatTable.PW_Other_expecected_recievables_AmtVal} />
         </td>
@@ -182,6 +188,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='BW_BusinessCash_Hand_Bank_AmtVal'
+            value={formState.BW_BusinessCash_Hand_Bank_AmtVal}
             required onChange={handleChange}
             placeholder={zakatTable.BW_BusinessCash_Hand_Bank_AmtVal} />
         </td>
@@ -197,6 +204,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='BW_Netvalueof_business_tradegoods_AmtVal'
+            value={formState.BW_Netvalueof_business_tradegoods_AmtVal}
            required onChange={handleChange}
             placeholder={zakatTable.BW_Netvalueof_business_tradegoods_AmtVal} />
         </td>
@@ -212,6 +220,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='BW_Total_business_recievables_AmtVal'
+            value={formState.BW_Total_business_recievables_AmtVal}
            required onChange={handleChange}
             placeholder={zakatTable.BW_Total_business_recievables_AmtVal} />
         </td>
@@ -227,6 +236,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='BW_NetIncomefrom_business_exploitedassets_duringyear_AmtVal'
+            value={formState.BW_NetIncomefrom_business_exploitedassets_duringyear_AmtVal}
            required onChange={handleChange}
             placeholder={zakatTable.BW_NetIncomefrom_business_exploitedassets_duringyear_AmtVal}  />
         </td>
@@ -242,6 +252,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='BW_Currentvalueof_held_realestateproperties_AmtVal'
+            value={formState.BW_Currentvalueof_held_realestateproperties_AmtVal}
             required red onChange={handleChange}
             placeholder={zakatTable.BW_Currentvalueof_held_realestateproperties_AmtVal} />
         </td>
@@ -285,6 +296,7 @@ export default function ZakatFormContent() {
             className="text"
             type="number"
             name='D_Outstanding_necessary_debts_AmtVal'
+            value={formState.D_Outstanding_necessary_debts_AmtVal}
             required onChange={handleChange}
             placeholder={zakatTable.D_Outstanding_necessary_debts_AmtVal}/>
         </td>
@@ -301,6 +313,7 @@ export default function ZakatFormContent() {
               className="text"
               type="number"
               name='D_Zakat_paid_in_advance_duringYear_ZakatDue'
+              value={formState.D_Zakat_paid_in_advance_duringYear_ZakatDue}
               required onChange={handleChange}
               placeholder={zakatTable.D_Zakat_paid_in_advance_duringYear_ZakatDue} />
         </td>

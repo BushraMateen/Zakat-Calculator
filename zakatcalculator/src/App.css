@@ -135,6 +135,7 @@ td{
     background: #2e3235;
     color: #dbd0d0;
     border: none;
+    font-size: medium;
 }
 
 .table{
@@ -146,6 +147,7 @@ td{
 
 .center-text{
   text-align: center;
+  font-size: medium;
 }
 @media only screen and (max-width: 800px) {
   .table {
