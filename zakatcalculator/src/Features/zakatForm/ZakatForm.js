@@ -12,32 +12,36 @@ export default function ZakatForm() {
   const { user} = useAuth0();
 
     let handleSubmit = (e)  => {
-      console.log('formstate',formState)
-
-      setIsCalculate(!isCalculate)
+      //console.log('formstate',formState)
 
       e.preventDefault();
-      fetch('https://zakat-api.herokuapp.com/entries/', {
-       method: "POST",
-       body: JSON.stringify({
-       formState: formState
-       }),
-       headers: {
-           'Content-Type': 'application/json',
-          
-       },
-     })
-     .then(res => res.json())
-      .then(
-        (result) => {
-          console.log('result post', result)
-          getTable();
-          open();
-        },
-        (error) => {
-          console.log('error', error)
-        }
-      )
+      
+      if(e.nativeEvent.submitter.className != 'expand-btn') // && e.nativeEvent.submitter.className != ''
+      {
+        fetch('https://zakat-api.herokuapp.com/entries/', {
+          method: "POST",
+          body: JSON.stringify({
+          formState: formState
+          }),
+          headers: {
+              'Content-Type': 'application/json',
+             
+          },
+        })
+        .then(res => res.json())
+         .then(
+           (result) => {
+             console.log('result post:', result)
+             //getTable();
+             setIsCalculate(!isCalculate);
+             open();
+           },
+           (error) => {
+             console.log('error', error)
+           }
+         )
+      }
+     
     }
 
     useEffect(() => {
