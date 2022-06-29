@@ -10,9 +10,9 @@ export default function ZakatFormHeader() {
           <tr>
             <th className='center-text'>Line</th>
             <th className='center-text'>Line item</th>
-            <th className='center-text'>Amtval</th>
-            <th className='center-text'>ZakatRate</th>
-            <th className='center-text'>ZakatDue</th>
+            <th className='center-text'>Amt</th>
+            <th className='center-text'>Zakat Rate</th>
+            <th className='center-text'>Zakat Due</th>
           </tr>
         </thead>
         <tbody>
