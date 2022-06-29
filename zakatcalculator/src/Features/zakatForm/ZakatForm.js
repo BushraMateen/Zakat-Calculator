@@ -4,6 +4,8 @@ import { UserContext } from './Context';
 import { useModal } from 'react-hooks-use-modal';
 import {useAuth0} from '@auth0/auth0-react';
 
+
+
 export default function ZakatForm() {
   
   const [Modal,open,close] = useModal()
@@ -16,9 +18,9 @@ export default function ZakatForm() {
 
       e.preventDefault();
 
-      if(e.nativeEvent.submitter.className !== 'expand-btn') // && e.nativeEvent.submitter.className != ''
+      if(e.nativeEvent.submitter.className !== 'expand-btn') // && e.nativeEvent.submitter.className != ''*
       {
-        fetch('https://zakat-api.herokuapp.com/entries/', {
+        fetch('http://127.0.0.1:8000/entries/', {
           method: "POST",
           body: JSON.stringify({
           formState: formState
@@ -53,13 +55,14 @@ export default function ZakatForm() {
     //https://zakat-api.herokuapp.com/
     /**fecthing zakattable data */ 
     let getTable = async () => {
-      let response = await fetch('https://zakat-api.herokuapp.com/table/'+ user.sub)
+      let response = await fetch('http://127.0.0.1:8000/table/'+ user.sub)
       let data = await response.json()
       console.log('data',data)
       setTable(data)
      
 
     }
+    
     //console.log('data',table)
 
   return (
@@ -75,6 +78,7 @@ export default function ZakatForm() {
         />
         <Modal>
         <div className='pop-up'>
+          
           <h4>zakat Payable : {table[0].D_Remaining_Zakat_Due_ZakatDue}</h4>
           <button  className = 'claculate-btn' onClick={close}>CLOSE</button>
         </div>
