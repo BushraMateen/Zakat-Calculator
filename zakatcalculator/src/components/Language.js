@@ -1,12 +1,19 @@
-import React from 'react'
-import { languageList } from './Data3'
+import React,{useState} from 'react'
+import ReactLanguageSelect from "react-languages-select";
+import "react-languages-select/css/react-languages-select.css";
 
 export default function Language() {
+
+  const [selectedLanguage, setSelectedLanguage] = useState("");
+
   return (
-    <div className='Dropdown-cotainer'>
-        <select className='list' id='name'>
-                {languageList.map((language) => <option className='optionclass' key={language.language} value={language.language}>{language.language}</option>)}
-                </select>
+    <div  className='Dropdown-container'>
+      <div className='flag-select'>
+      <ReactLanguageSelect className='Dropdown'
+              names={"international"}
+              onSelect={(languageCode)=>setSelectedLanguage(languageCode)} />
+              </div>
+
     </div>
   )
 }

@@ -11,7 +11,7 @@ const formReducer = (state, action) => {
         ...state,
         UserId : action.payload,
         ZakatRate : 0.025,
-        Year : new Date().getFullYear() ,
+        Year : new Date().getFullYear(),
         email_field : action.email,
         name : action.username,
       }

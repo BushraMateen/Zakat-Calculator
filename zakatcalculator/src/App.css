@@ -60,16 +60,34 @@
   font-size: 25px;
 }
 
-.list{
-  width: 96px;
-  height: 26px;
+.Dropdown{
+  width: 146px;
+  height: 30px;
   left: 77px;
   top: -3px;
   background: #2B4047;
   border-radius: 50px;
   color: white;
+  padding : 5px;
 
 }
+.flag-select {
+  /* position: relative; */
+  display: inline-block;
+  vertical-align: inherit;
+  padding-bottom: 5px;
+  text-align: left;
+}
+/* .flag-select__btn:before {
+  width: 146px;
+  height: 30px;
+  left: 77px;
+  top: -3px;
+  background: #2B4047;
+  border-radius: 50px;
+  color: white;
+  padding : 5px;
+} */
 .optionclass{
   width: 56px;
   height: 14px;
